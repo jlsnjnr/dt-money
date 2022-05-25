@@ -43,8 +43,10 @@ export function TransactionsProvider({ children }: TrasactionsProviderProps) {
 
     setTransactions([
       ...transactions,
-      transaction
+      transaction,
     ]);
+
+    localStorage.setItem('@DtMoney:transaction', JSON.stringify(transaction));
   }
 
   return (
